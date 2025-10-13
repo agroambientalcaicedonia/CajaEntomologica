@@ -1,7 +1,11 @@
 import { useEffect, useState, useRef } from "react";
 import "../css/Insectos.css";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { cucarron, hormiga } from "../const/insectos";
+import {
+  Compsus_sp, Canthon_mutabilis, Decticus_albifrons, Dryas_iulia, Edessa_meditabunda, Heilipus_lauri,
+  Hydrobius_fuscipes, Macraspis_lucida, Mecopoda_niponensis, Neoconocephalus_pullus, Odontotaenius_disjunctus,
+  Pardogryllacris_sp, Schistocerca_damnifica, Teleogryllus_emma, Xylocopa_sonorina,
+} from "../const/insectos";
 
 function Insectos() {
   const [searchParams] = useSearchParams();
@@ -18,11 +22,53 @@ function Insectos() {
 
   useEffect(() => {
     if (id == 1) {
-      setInsecto(cucarron);
+      setInsecto(Compsus_sp);
       setIdInsecto("1");
     } else if (id == 2) {
-      setInsecto(hormiga);
+      setInsecto(Canthon_mutabilis);
       setIdInsecto("2");
+    } else if (id == 3) {
+      setInsecto(Decticus_albifrons);
+      setIdInsecto("3");
+    } else if (id == 4) {
+      setInsecto(Dryas_iulia);
+      setIdInsecto("4");
+    } else if (id == 5) {
+      setInsecto(Edessa_meditabunda);
+      setIdInsecto("5");
+    } else if (id == 6) {
+      setInsecto(Heilipus_lauri);
+      setIdInsecto("6");
+    } else if (id == 7) {
+      setInsecto(Hydrobius_fuscipes);
+      setIdInsecto("7");
+    } else if (id == 8) {
+      setInsecto(Macraspis_lucida);
+      setIdInsecto("8");
+    } else if (id == 9) {
+      setInsecto(Mecopoda_niponensis);
+      setIdInsecto("9");
+    } else if (id == 10) {
+      setInsecto(Neoconocephalus_pullus);
+      setIdInsecto("10");
+    } else if (id == 11) {
+      setInsecto(Odontotaenius_disjunctus);
+      setIdInsecto("11");
+    } else if (id == 12) {
+      setInsecto(Pardogryllacris_sp);
+      setIdInsecto("12");
+    } else if (id == 13) {
+      setInsecto(Schistocerca_damnifica);
+      setIdInsecto("13");
+    } else if (id == 14) {
+      setInsecto(Teleogryllus_emma);
+      setIdInsecto("14");
+    } else if (id == 15) {
+      setInsecto(Xylocopa_sonorina);
+      setIdInsecto("15");
+    } else {
+      setInsecto(null);
+      setIdInsecto("0");
     }
   }, [id]);
 
@@ -125,6 +171,12 @@ function Insectos() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Recordatorio debajo del reproductor */}
+            <div className="recordatorio-captura">
+              <span className="recordatorio-texto">¡Recuerda atrapar tu insecto!</span>
+              <span className="flecha-abajo">↓</span>
             </div>
 
             <button className={insecto.boton} onClick={handleRescatar}>

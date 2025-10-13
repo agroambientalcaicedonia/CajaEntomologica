@@ -304,3 +304,228 @@
 .reproductor-audio .btn-control:active {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.252)
 }
+
+/* Recordatorio de captura debajo del reproductor */
+.recordatorio-captura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -40px; /* acerca al reproductor */
+}
+
+.recordatorio-texto {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.flecha-abajo {
+  font-size: 24px;
+  animation: bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Botones por insecto: propiedades comunes */
+.button-insecto,
+.button-insecto-Compsus_sp,
+.button-insecto-Canthon_mutabilis,
+.button-insecto-Decticus_albifrons,
+.button-insecto-Dryas_iulia,
+.button-insecto-Edessa_meditabunda,
+.button-insecto-Heilipus_lauri,
+.button-insecto-Hydrobius_fuscipes,
+.button-insecto-Macraspis_lucida,
+.button-insecto-Mecopoda_niponensis,
+.button-insecto-Neoconocephalus_pullus,
+.button-insecto-Odontotaenius_disjunctus,
+.button-insecto-Pardogryllacris_sp,
+.button-insecto-Schistocerca_damnifica,
+.button-insecto-Teleogryllus_emma,
+.button-insecto-Xylocopa_sonorina {
+  width: 100%;
+  border-radius: 15px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  font-weight: bold;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.252);
+  border: none;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+/* Botones por insecto: colores específicos alineados con fondos */
+.button-insecto-Compsus_sp { background: linear-gradient(to right, #8fd19e 20%, #3c8d5d 100%); }
+.button-insecto-Canthon_mutabilis { background: linear-gradient(to right, #2aa39a 20%, #116466 100%); }
+.button-insecto-Decticus_albifrons { background: linear-gradient(to right, #8bd66b 20%, #4c9a2a 100%); }
+.button-insecto-Dryas_iulia { background: linear-gradient(to right, #ffa84b 20%, #ff6b00 100%); }
+.button-insecto-Edessa_meditabunda { background: linear-gradient(to right, #7fb069 20%, #6b4f2a 100%); }
+.button-insecto-Heilipus_lauri { background: linear-gradient(to right, #3a3d3f 20%, #1f2224 100%); }
+.button-insecto-Hydrobius_fuscipes { background: linear-gradient(to right, #2b2b2b 20%, #1a1a1a 100%); }
+.button-insecto-Macraspis_lucida { background: linear-gradient(to right, #88e07b 20%, #2db34a 100%); }
+.button-insecto-Mecopoda_niponensis { background: linear-gradient(to right, #7fa86b 20%, #3f6b3b 100%); }
+.button-insecto-Neoconocephalus_pullus { background: linear-gradient(to right, #a8e063 20%, #78c850 100%); }
+.button-insecto-Odontotaenius_disjunctus { background: linear-gradient(to right, #3b3b3b 20%, #111111 100%); }
+.button-insecto-Pardogryllacris_sp { background: linear-gradient(to right, #c69c6d 20%, #8b5e3c 100%); }
+.button-insecto-Schistocerca_damnifica { background: linear-gradient(to right, #d9c79e 20%, #8fae63 100%); }
+.button-insecto-Teleogryllus_emma { background: linear-gradient(to right, #b07d4f 20%, #7a4b2a 100%); }
+.button-insecto-Xylocopa_sonorina { background: linear-gradient(to right, #2c2b4f 20%, #0f0e1a 100%); }
+
+/* Fondos por insecto (sencillos y acordes) */
+.fondo-insectos-Compsus_sp {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #8fd19e 20%, #3c8d5d 100%);
+}
+
+.fondo-insectos-Canthon_mutabilis {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2aa39a 20%, #116466 100%);
+}
+
+.fondo-insectos-Decticus_albifrons {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #8bd66b 20%, #4c9a2a 100%);
+}
+
+.fondo-insectos-Dryas_iulia {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffa84b 20%, #ff6b00 100%);
+}
+
+.fondo-insectos-Edessa_meditabunda {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #7fb069 20%, #6b4f2a 100%);
+}
+
+.fondo-insectos-Heilipus_lauri {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #3a3d3f 20%, #1f2224 100%);
+}
+
+.fondo-insectos-Hydrobius_fuscipes {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2b2b2b 20%, #1a1a1a 100%);
+}
+
+.fondo-insectos-Macraspis_lucida {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #88e07b 20%, #2db34a 100%);
+}
+
+.fondo-insectos-Mecopoda_niponensis {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #7fa86b 20%, #3f6b3b 100%);
+}
+
+.fondo-insectos-Neoconocephalus_pullus {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #a8e063 20%, #78c850 100%);
+}
+
+.fondo-insectos-Odontotaenius_disjunctus {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #3b3b3b 20%, #111111 100%);
+}
+
+.fondo-insectos-Pardogryllacris_sp {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #c69c6d 20%, #8b5e3c 100%);
+}
+
+.fondo-insectos-Schistocerca_damnifica {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #d9c79e 20%, #8fae63 100%);
+}
+
+.fondo-insectos-Teleogryllus_emma {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #b07d4f 20%, #7a4b2a 100%);
+}
+
+.fondo-insectos-Xylocopa_sonorina {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2c2b4f 20%, #0f0e1a 100%);
+}

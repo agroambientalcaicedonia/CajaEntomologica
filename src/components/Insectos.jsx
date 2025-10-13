@@ -194,7 +194,7 @@ function Insectos() {
                 <div className="reproductor-audio">
                   <audio
                     ref={audioRef}
-                    src={insecto.audio}
+                    src={`${import.meta.env.BASE_URL}${insecto.audio}`}
                     onTimeUpdate={handleTimeUpdate}
                     onLoadedMetadata={handleLoadedMetadata}
                   />

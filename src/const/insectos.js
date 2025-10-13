@@ -3,7 +3,7 @@ export const Compsus_sp = {
   nombre: "Compsus sp.",
   imagen: "./images/Compsus sp.png",
   decoracion: "./images/Cucarron.png",
-  audio: "/audios/Compsus sp.wav",
+  audio: "audios/Compsus sp.wav",
   boton: "button-insecto-Compsus_sp",
 };
 
@@ -12,7 +12,7 @@ export const Canthon_mutabilis = {
   nombre: "Canthon mutabilis",
   imagen: "./images/Canthon mutabilis.png",
   decoracion: "./images/Cucarron.png",
-  audio: "/audios/Canthon mutabilis.wav",
+  audio: "audios/Canthon mutabilis.wav",
   boton: "button-insecto-Canthon_mutabilis",
 };
 
@@ -21,7 +21,7 @@ export const Decticus_albifrons = {
   nombre: "Decticus albifrons",
   imagen: "./images/Decticus albifrons.png",
   decoracion: "./images/Decticus albifrons.png",
-  audio: "/audios/Decticus albifrons.wav",
+  audio: "audios/Decticus albifrons.wav",
   boton: "button-insecto-Decticus_albifrons",
 };
 
@@ -30,7 +30,7 @@ export const Dryas_iulia = {
   nombre: "Dryas iulia",
   imagen: "./images/Dryas iulia.png",
   decoracion: "./images/Dryas iulia.png",
-  audio: "/audios/Dryas iulia.wav",
+  audio: "audios/Dryas iulia.wav",
   boton: "button-insecto-Dryas_iulia",
 };
 
@@ -39,7 +39,7 @@ export const Edessa_meditabunda = {
   nombre: "Edessa meditabunda",
   imagen: "./images/Edessa meditabunda.png",
   decoracion: "./images/Edessa meditabunda.png",
-  audio: "/audios/Edessa meditabunda.wav",
+  audio: "audios/Edessa meditabunda.wav",
   boton: "button-insecto-Edessa_meditabunda",
 };
 
@@ -48,7 +48,7 @@ export const Heilipus_lauri = {
   nombre: "Heilipus lauri",
   imagen: "./images/Heilipus lauri.png",
   decoracion: "./images/Heilipus lauri.png",
-  audio: "/audios/Heilipus lauri.wav",
+  audio: "audios/Heilipus lauri.wav",
   boton: "button-insecto-Heilipus_lauri",
 };
 
@@ -57,7 +57,7 @@ export const Hydrobius_fuscipes = {
   nombre: "Hydrobius fuscipes",
   imagen: "./images/Hydrobius fuscipes.png",
   decoracion: "./images/Hydrobius fuscipes.png",
-  audio: "/audios/Hydrobius fuscipes.wav",
+  audio: "audios/Hydrobius fuscipes.wav",
   boton: "button-insecto-Hydrobius_fuscipes",
 };
 
@@ -66,7 +66,7 @@ export const Macraspis_lucida = {
   nombre: "Macraspis lucida",
   imagen: "./images/Macraspis lucida.png",
   decoracion: "./images/Macraspis lucida.png",
-  audio: "/audios/Macraspis lucida.wav",
+  audio: "audios/Macraspis lucida.wav",
   boton: "button-insecto-Macraspis_lucida",
 };
 
@@ -75,7 +75,7 @@ export const Mecopoda_niponensis = {
   nombre: "Mecopoda niponensis",
   imagen: "./images/Mecopoda niponensis.png",
   decoracion: "./images/Mecopoda niponensis.png",
-  audio: "/audios/Mecopoda niponensis.wav",
+  audio: "audios/Mecopoda niponensis.wav",
   boton: "button-insecto-Mecopoda_niponensis",
 };
 
@@ -84,7 +84,7 @@ export const Neoconocephalus_pullus = {
   nombre: "Neoconocephalus pullus",
   imagen: "./images/Neoconocephalus pullus.png",
   decoracion: "./images/Neoconocephalus pullus.png",
-  audio: "/audios/Neoconocephalus pullus.wav",
+  audio: "audios/Neoconocephalus pullus.wav",
   boton: "button-insecto-Neoconocephalus_pullus",
 };
 
@@ -93,7 +93,7 @@ export const Odontotaenius_disjunctus = {
   nombre: "Odontotaenius disjunctus",
   imagen: "./images/Odontotaenius disjunctus.png",
   decoracion: "./images/Odontotaenius disjunctus.png",
-  audio: "/audios/Odontotaenius disjunctus.wav",
+  audio: "audios/Odontotaenius disjunctus.wav",
   boton: "button-insecto-Odontotaenius_disjunctus",
 };
 
@@ -102,7 +102,7 @@ export const Pardogryllacris_sp = {
   nombre: "Pardogryllacris sp",
   imagen: "./images/Pardogryllacris sp.png",
   decoracion: "./images/Pardogryllacris sp.png",
-  audio: "/audios/Pardogryllacris sp.wav",
+  audio: "audios/Pardogryllacris sp.wav",
   boton: "button-insecto-Pardogryllacris_sp",
 };
 
@@ -111,7 +111,7 @@ export const Schistocerca_damnifica = {
   nombre: "Schistocerca damnifica",
   imagen: "./images/Schistocerca damnifica.png",
   decoracion: "./images/Schistocerca damnifica.png",
-  audio: "/audios/Schistocerca damnifica.wav",
+  audio: "audios/Schistocerca damnifica.wav",
   boton: "button-insecto-Schistocerca_damnifica",
 };
 
@@ -120,7 +120,7 @@ export const Teleogryllus_emma = {
   nombre: "Teleogryllus emma",
   imagen: "./images/Teleogryllus emma.png",
   decoracion: "./images/Teleogryllus emma.png",
-  audio: "/audios/Teleogryllus emma.wav",
+  audio: "audios/Teleogryllus emma.wav",
   boton: "button-insecto-Teleogryllus_emma",
 };
 
@@ -129,6 +129,6 @@ export const Xylocopa_sonorina = {
   nombre: "Xylocopa sonorina",
   imagen: "./images/Xylocopa sonorina.png",
   decoracion: "./images/Xylocopa sonorina.png",
-  audio: "/audios/Xylocopa sonorina.wav",
+  audio: "audios/Xylocopa sonorina.wav",
   boton: "button-insecto-Xylocopa_sonorina",
 };

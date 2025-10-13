@@ -1,0 +1,306 @@
+.fondo-insectos {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgb(150, 100, 62) 20%,
+    rgb(114, 76, 47) 100%
+  );
+}
+
+.img-2 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 50%;
+  z-index: 3;
+  animation: Animacion-pokebola-arriba 2s ease-in-out;
+}
+
+.img-pokebola {
+  width: 100%;
+  height: 60%;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  background-color: white;
+  animation: Animacion-pokebola-abajo 2s ease-in-out;
+}
+
+@keyframes Animacion-pokebola-arriba {
+  0% {
+    top: -60%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes Animacion-pokebola-abajo {
+  0% {
+    top: 160%;
+  }
+  100% {
+    top: 40%;
+  }
+}
+
+/* Estilos para el reproductor de audio */
+.reproductor-audio {
+  width: 100%;
+  max-width: 300px;
+  margin: 15px auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.controles-audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.btn-play {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0c0c0c;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-control {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.barra-progreso {
+  width: 100%;
+}
+
+.progreso {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ddd;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.progreso::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tiempo {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+  color: #555;
+}
+
+.contenedor-principal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.contenedor-insectos {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  height: auto;
+}
+
+.contenedor-insectos .img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.Audio-insectos {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  background-color: white;
+  padding: 20px;
+  height: 390px;
+  gap: 20px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.264);
+  margin: 50px auto;
+}
+
+.button-insecto {
+  width: 100%;
+  border-radius: 15px;
+  background: linear-gradient(
+    to right,
+    rgb(203, 136, 85) 20%,
+    rgb(143, 91, 51)
+  );
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  font-weight: bold;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.252);
+  border: none;
+  cursor: pointer;
+}
+
+.fondonegro {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decoracion {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(50deg);
+  border: none;
+}
+
+.contenedor-decoracion {
+  width: 440px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.fondo-insectos-hormiga {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgb(205, 186, 62) 20%,
+    rgb(158, 144, 48) 100%
+  );
+}
+
+.contenedor-disco {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.264);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disco {
+  width: 180px;
+  height: 150px;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.button-insecto-hormiga {
+  width: 100%;
+  border-radius: 15px;
+  background: linear-gradient(
+    to right,
+    rgb(251, 228, 76) 20%,
+    rgb(202, 182, 57) 100%
+  );
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  font-weight: bold;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.252);
+  border: none;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+/* Overrides para usar esquema en negro en el reproductor */
+.reproductor-audio .btn-play {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.reproductor-audio .btn-control {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.reproductor-audio .progreso {
+  background: #9f9e9e; /* pista en gris para contraste */
+}
+
+.reproductor-audio .progreso::-webkit-slider-thumb {
+  background: #000000;
+}
+
+.reproductor-audio .progreso::-moz-range-thumb {
+  background: #000000;
+}
+
+/* Sombras para el contenedor del reproductor y botones */
+.reproductor-audio {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.252);
+}
+
+.reproductor-audio .btn-play,
+.reproductor-audio .btn-control {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.252);
+}
+
+.reproductor-audio .btn-play:active,
+.reproductor-audio .btn-control:active {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.252)
+}

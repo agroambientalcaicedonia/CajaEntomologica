@@ -529,3 +529,54 @@
   height: 100vh;
   background: linear-gradient(to bottom, #2c2b4f 20%, #0f0e1a 100%);
 }
+
+.img-2 {
+  position: absolute;
+  top: -20%;
+  left: 0%;
+  width: 1000px;
+  height: 1000px;
+  z-index: 3;
+  transform: rotate(50deg);
+  animation: Animation-capturar 1.5s linear;
+}
+
+.text {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  animation: text 2s linear;
+}
+
+@keyframes text {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes Animation-capturar {
+  0% {
+    top: -20%;
+    left: -20%;
+  }
+  50% {
+    top: 10%;
+    left: -35%;
+    transform: rotate(-20deg);
+  }
+  100% {
+    top: 80%;
+    left: -40%;
+    transform: rotate(-60deg);
+  }
+}

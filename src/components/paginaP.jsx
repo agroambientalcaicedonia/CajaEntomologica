@@ -1,13 +1,26 @@
 // Importamos React para poder usar los hooks
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/PaginaP.css";
 
 function PaginaP() {
+  const navigate = useNavigate();
   const [idsInsectos, setIdsInsectos] = useState([]);
   const [insecto1, setInsecto1] = useState(true);
   const [insecto2, setInsecto2] = useState(true);
   const [insecto3, setInsecto3] = useState(true);
   const [insecto4, setInsecto4] = useState(true);
+  const [insecto5, setInsecto5] = useState(true);
+  const [insecto6, setInsecto6] = useState(true);
+  const [insecto7, setInsecto7] = useState(true);
+  const [insecto8, setInsecto8] = useState(true);
+  const [insecto9, setInsecto9] = useState(true);
+  const [insecto10, setInsecto10] = useState(true);
+  const [insecto11, setInsecto11] = useState(true);
+  const [insecto12, setInsecto12] = useState(true);
+  const [insecto13, setInsecto13] = useState(true);
+  const [insecto14, setInsecto14] = useState(true);
+  const [insecto15, setInsecto15] = useState(true);
 
   useEffect(() => {
     const idsGuardados = JSON.parse(localStorage.getItem("idsInsectos")) || [];
@@ -57,22 +70,13 @@ function PaginaP() {
     if (idsGuardados.includes("15")) {
       setInsecto15(false);
     }
-    if (idsGuardados.includes("16")) {
-      setInsecto16(false);
-    }
-    if (idsGuardados.includes("17")) {
-      setInsecto17(false);
-    }
-    if (idsGuardados.includes("18")) {
-      setInsecto18(false);
-    }
-    if (idsGuardados.includes("19")) {
-      setInsecto19(false);
-    }
-    if (idsGuardados.includes("20")) {
-      setInsecto20(false);
-    }
+    // No hay más de 15 insectos en la grilla actual
   }, []);
+
+  const handleCardClick = (targetId, locked) => {
+    if (locked) return;
+    navigate(`/insectos?id=${targetId}`);
+  };
 
   return (
     <div>
@@ -86,7 +90,7 @@ function PaginaP() {
           </h2>
         </section>
         <div className="contenedor-targetas">
-          <div className="Targeta1">
+          <div className="Targeta1" onClick={() => handleCardClick(1, insecto1)}>
             <div className={insecto1 ? "desenfoque" : "sindesenfoque"}>
               <img
                 className="img-insectosPaginaP"
@@ -96,7 +100,7 @@ function PaginaP() {
               <h1>Compsus sp</h1>
             </div>
           </div>
-          <div className="Targeta1">
+          <div className="Targeta1" onClick={() => handleCardClick(2, insecto2)}>
             <div className={insecto2 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
@@ -105,8 +109,8 @@ function PaginaP() {
               <h1>Canthon mutabilis</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(3, insecto3)}>
+            <div className={insecto3 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Decticus albifrons.png" 
@@ -114,8 +118,8 @@ function PaginaP() {
               <h1>Decticus albifrons</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(4, insecto4)}>
+            <div className={insecto4 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Dryas iulia.png" 
@@ -123,8 +127,8 @@ function PaginaP() {
               <h1>Dryas iulia</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(5, insecto5)}>
+            <div className={insecto5 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Edessa meditabunda.png" 
@@ -132,8 +136,8 @@ function PaginaP() {
               <h1>Edessa meditabunda</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(6, insecto6)}>
+            <div className={insecto6 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Heilipus lauri.png" 
@@ -141,8 +145,8 @@ function PaginaP() {
               <h1>Heilipus lauri</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(7, insecto7)}>
+            <div className={insecto7 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Hydrobius fuscipes.png" 
@@ -150,8 +154,8 @@ function PaginaP() {
               <h1>Hydrobius fuscipes</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(8, insecto8)}>
+            <div className={insecto8 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Macraspis lucida.png" 
@@ -159,8 +163,8 @@ function PaginaP() {
               <h1>Macraspis lucida</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(9, insecto9)}>
+            <div className={insecto9 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Mecopoda niponensis.png" 
@@ -168,8 +172,8 @@ function PaginaP() {
               <h1>Mecopoda niponensis</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(10, insecto10)}>
+            <div className={insecto10 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Neoconocephalus pullus.png" 
@@ -177,8 +181,8 @@ function PaginaP() {
               <h1>Neoconocephalus pullus</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(11, insecto11)}>
+            <div className={insecto11 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Odontotaenius disjunctus.png" 
@@ -186,8 +190,8 @@ function PaginaP() {
               <h1>Odontotaenius disjunctus</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(12, insecto12)}>
+            <div className={insecto12 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Pardogryllacris sp.png" 
@@ -195,8 +199,8 @@ function PaginaP() {
               <h1>Pardogryllacris sp</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(13, insecto13)}>
+            <div className={insecto13 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Schistocerca damnifica.png" 
@@ -204,8 +208,8 @@ function PaginaP() {
               <h1>Schistocerca damnifica</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(14, insecto14)}>
+            <div className={insecto14 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Teleogryllus emma.png" 
@@ -213,8 +217,8 @@ function PaginaP() {
               <h1>Teleogryllus emma</h1>
             </div>
           </div>
-          <div className="Targeta1">
-            <div className="desenfoque">
+          <div className="Targeta1" onClick={() => handleCardClick(15, insecto15)}>
+            <div className={insecto15 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Xylocopa sonorina.png" 

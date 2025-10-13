@@ -19,58 +19,108 @@ function Insectos() {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef(null);
+  const idsGuardados = JSON.parse(localStorage.getItem("idsInsectos")) || [];
+  const [boton, setboton] = useState(false);
+
 
   useEffect(() => {
     if (id == 1) {
       setInsecto(Compsus_sp);
       setIdInsecto("1");
+      if (idsGuardados.includes("1")) {
+        setboton(true);
+      }
     } else if (id == 2) {
       setInsecto(Canthon_mutabilis);
       setIdInsecto("2");
+      if (idsGuardados.includes("2")) {
+        setboton(true);
+      }
     } else if (id == 3) {
       setInsecto(Decticus_albifrons);
       setIdInsecto("3");
+      if (idsGuardados.includes("3")) {
+        setboton(true);
+      }
     } else if (id == 4) {
       setInsecto(Dryas_iulia);
       setIdInsecto("4");
+      if (idsGuardados.includes("4")) {
+        setboton(true);
+      }
     } else if (id == 5) {
       setInsecto(Edessa_meditabunda);
       setIdInsecto("5");
+      if (idsGuardados.includes("5")) {
+        setboton(true);
+      }
     } else if (id == 6) {
       setInsecto(Heilipus_lauri);
       setIdInsecto("6");
+      if (idsGuardados.includes("6")) {
+        setboton(true);
+      }
     } else if (id == 7) {
       setInsecto(Hydrobius_fuscipes);
       setIdInsecto("7");
+      if (idsGuardados.includes("7")) {
+        setboton(true);
+      }
     } else if (id == 8) {
       setInsecto(Macraspis_lucida);
       setIdInsecto("8");
+      if (idsGuardados.includes("8")) {
+        setboton(true);
+      }
     } else if (id == 9) {
       setInsecto(Mecopoda_niponensis);
       setIdInsecto("9");
+      if (idsGuardados.includes("9")) {
+        setboton(true);
+      }
     } else if (id == 10) {
       setInsecto(Neoconocephalus_pullus);
       setIdInsecto("10");
+      if (idsGuardados.includes("10")) {
+        setboton(true);
+      }
     } else if (id == 11) {
       setInsecto(Odontotaenius_disjunctus);
       setIdInsecto("11");
+      if (idsGuardados.includes("11")) {
+        setboton(true);
+      }
     } else if (id == 12) {
       setInsecto(Pardogryllacris_sp);
       setIdInsecto("12");
+      if (idsGuardados.includes("12")) {
+        setboton(true);
+      }
     } else if (id == 13) {
       setInsecto(Schistocerca_damnifica);
       setIdInsecto("13");
+      if (idsGuardados.includes("13")) {
+        setboton(true);
+      }
     } else if (id == 14) {
       setInsecto(Teleogryllus_emma);
       setIdInsecto("14");
+      if (idsGuardados.includes("14")) {
+        setboton(true);
+      }
     } else if (id == 15) {
       setInsecto(Xylocopa_sonorina);
       setIdInsecto("15");
+      if (idsGuardados.includes("15")) {
+        setboton(true);
+      }
     } else {
       setInsecto(null);
       setIdInsecto("0");
     }
   }, [id]);
+
+
 
   function Rescatar() {
     setTimeout(() => {
@@ -83,7 +133,7 @@ function Insectos() {
     setRescatado(true);
     Rescatar();
     const idsGuardados = JSON.parse(localStorage.getItem("idsInsectos")) || [];
-    const nuevosIds = [...idsGuardados, idInsecto];
+    const nuevosIds = Array.from(new Set([...idsGuardados, idInsecto]));
     localStorage.setItem("idsInsectos", JSON.stringify(nuevosIds));
     console.log("IDs guardados ahora:", nuevosIds);
   }
@@ -179,15 +229,24 @@ function Insectos() {
               <span className="flecha-abajo">↓</span>
             </div>
 
-            <button className={insecto.boton} onClick={handleRescatar}>
-              Atrapar
-            </button>
-
+            {boton ? (
+              <button
+                className={insecto.boton}
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                Regresar a la Coleccion
+              </button>
+            ) : (
+              <button className={insecto.boton} onClick={handleRescatar}>
+                Rescatar
+              </button>
+            )}
             {rescatado && (
               <div className="fondonegro">
-                <img src="./images/pokebola.png" className="img-2" />
-                <h1>¡Insecto Atrapado!</h1>
-                <div className="img-pokebola"></div>
+                <img src="./images/red.png" className="img-2" />
+                <h1 className="text">¡Insecto rescatado!</h1>
               </div>
             )}
           </div>

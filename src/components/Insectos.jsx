@@ -246,7 +246,7 @@ function Insectos() {
             {rescatado && (
               <div className="fondonegro">
                 <img src="./images/red.png" className="img-2" />
-                <h1 className="text">¡Insecto rescatado!</h1>
+                <h1 className="text">¡Insecto Atrapado!</h1>
               </div>
             )}
           </div>

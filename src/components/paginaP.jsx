@@ -21,6 +21,11 @@ function PaginaP() {
   const [insecto13, setInsecto13] = useState(true);
   const [insecto14, setInsecto14] = useState(true);
   const [insecto15, setInsecto15] = useState(true);
+  const [insecto16, setInsecto16] = useState(true);
+  const [insecto17, setInsecto17] = useState(true);
+  const [insecto18, setInsecto18] = useState(true);
+  const [insecto19, setInsecto19] = useState(true);
+  const [insecto20, setInsecto20] = useState(true);
 
   useEffect(() => {
     const idsGuardados = JSON.parse(localStorage.getItem("idsInsectos")) || [];
@@ -70,7 +75,21 @@ function PaginaP() {
     if (idsGuardados.includes("15")) {
       setInsecto15(false);
     }
-    // No hay más de 15 insectos en la grilla actual
+    if (idsGuardados.includes("16")) {
+      setInsecto16(false);
+    }
+    if (idsGuardados.includes("17")) {
+      setInsecto17(false);
+    }
+    if (idsGuardados.includes("18")) {
+      setInsecto18(false);
+    }
+    if (idsGuardados.includes("19")) {
+      setInsecto19(false);
+    }
+    if (idsGuardados.includes("20")) {
+      setInsecto20(false);
+    }
   }, []);
 
   const handleCardClick = (targetId, locked) => {
@@ -83,7 +102,7 @@ function PaginaP() {
       <div className="fondo"></div>
       <div className="Contenedor1">
         <section>
-          <h1 className="Titulo">¡Conocelos!</h1>
+          <h1 className="Titulo">¡Conoce los insectos de la Caja Entomologica!</h1>
           <h2 className="Informacion">
             Para conocer más información sobre los insectos, escanea el QR de
             cada uno para desbloquearlos
@@ -224,6 +243,51 @@ function PaginaP() {
                 src="./images/Xylocopa sonorina.png" 
                 alt="Xylocopa sonorina" />
               <h1>Xylocopa sonorina</h1>
+            </div>
+          </div>
+          <div className="Targeta1" onClick={() => handleCardClick(16, insecto16)}>
+            <div className={insecto16 ? "desenfoque" : "sindesenfoque"}>
+              <img 
+                className="img-insectosPaginaP"
+                src="./images/Polistes erythrocephalus.png" 
+                alt="Polistes erythrocephalus" />
+              <h1>Polistes erythrocephalus</h1>
+            </div>
+          </div>
+          <div className="Targeta1" onClick={() => handleCardClick(17, insecto17)}>
+            <div className={insecto17 ? "desenfoque" : "sindesenfoque"}>
+              <img 
+                className="img-insectosPaginaP"
+                src="./images/Oebalus pugnax.png" 
+                alt="Oebalus pugnax" />
+              <h1>Oebalus pugnax</h1>
+            </div>
+          </div>
+          <div className="Targeta1" onClick={() => handleCardClick(18, insecto18)}>
+            <div className={insecto18 ? "desenfoque" : "sindesenfoque"}>
+              <img 
+                className="img-insectosPaginaP"
+                src="./images/Lucilia sericata.png" 
+                alt="Lucilia sericata" />
+              <h1>Lucilia sericata</h1>
+            </div>
+          </div>
+          <div className="Targeta1" onClick={() => handleCardClick(19, insecto19)}>
+            <div className={insecto19 ? "desenfoque" : "sindesenfoque"}>
+              <img 
+                className="img-insectosPaginaP"
+                src="./images/Leptoglossus zonatus.png" 
+                alt="Leptoglossus zonatus" />
+              <h1>Leptoglossus zonatus</h1>
+            </div>
+          </div>
+          <div className="Targeta1" onClick={() => handleCardClick(20, insecto20)}>
+            <div className={insecto20 ? "desenfoque" : "sindesenfoque"}>
+              <img 
+                className="img-insectosPaginaP"
+                src="./images/Brachypalpus valgus.png" 
+                alt="Brachypalpus valgus" />
+              <h1>Brachypalpus valgus</h1>
             </div>
           </div>
         </div>

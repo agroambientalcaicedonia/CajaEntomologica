@@ -4,7 +4,8 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   Compsus_sp, Canthon_mutabilis, Decticus_albifrons, Dryas_iulia, Edessa_meditabunda, Heilipus_lauri,
   Hydrobius_fuscipes, Macraspis_lucida, Mecopoda_niponensis, Neoconocephalus_pullus, Odontotaenius_disjunctus,
-  Pardogryllacris_sp, Schistocerca_damnifica, Teleogryllus_emma, Xylocopa_sonorina,
+  Pardogryllacris_sp, Schistocerca_damnifica, Teleogryllus_emma, Xylocopa_sonorina, 
+  Polistes_erythrocephalus, Lucilia_sericata, Leptoglossus_zonatus, Brachypalpus_valgus, Oebalus_pugnax
 } from "../const/insectos";
 
 function Insectos() {
@@ -114,6 +115,36 @@ function Insectos() {
       if (idsGuardados.includes("15")) {
         setboton(true);
       }
+    } else if (id == 16) {
+      setInsecto(Polistes_erythrocephalus);
+      setIdInsecto("16");
+      if (idsGuardados.includes("16")) {
+        setboton(true);
+      }
+    } else if (id == 17) {
+      setInsecto(Lucilia_sericata);
+      setIdInsecto("17");
+      if (idsGuardados.includes("17")) {
+        setboton(true);
+      }
+    } else if (id == 18) {
+      setInsecto(Leptoglossus_zonatus);
+      setIdInsecto("18");
+      if (idsGuardados.includes("18")) {
+        setboton(true);
+      }
+    } else if (id == 19) {
+      setInsecto(Brachypalpus_valgus);
+      setIdInsecto("19");
+      if (idsGuardados.includes("19")) {
+        setboton(true);
+      }
+    } else if (id == 20) {
+      setInsecto(Oebalus_pugnax);
+      setIdInsecto("20");
+      if (idsGuardados.includes("20")) {
+        setboton(true);
+      }
     } else {
       setInsecto(null);
       setIdInsecto("0");
@@ -201,7 +232,7 @@ function Insectos() {
                   <div className="controles-audio">
                     <button onClick={skipBackward} className="btn-control">-3</button>
                     <button onClick={togglePlay} className="btn-play">
-                      {isPlaying ? "| |" : " ▶ "}
+                      {isPlaying ? "| |" : " > "}
                     </button>
                     <button onClick={skipForward} className="btn-control">+3</button>
                   </div>
@@ -240,7 +271,7 @@ function Insectos() {
               </button>
             ) : (
               <button className={insecto.boton} onClick={handleRescatar}>
-                Rescatar
+                ¡Atrapar!
               </button>
             )}
             {rescatado && (

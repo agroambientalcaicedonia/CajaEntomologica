@@ -348,7 +348,12 @@
 .button-insecto-Pardogryllacris_sp,
 .button-insecto-Schistocerca_damnifica,
 .button-insecto-Teleogryllus_emma,
-.button-insecto-Xylocopa_sonorina {
+.button-insecto-Xylocopa_sonorina,
+.button-insecto-Oebalus_pugnax,
+.button-insecto-Lucilia_sericata,
+.button-insecto-Brachypalpus_valgus,
+.button-insecto-Leptoglossus_zonatus,
+.button-insecto-Polistes_erythrocephalus {
   width: 100%;
   border-radius: 15px;
   color: white;
@@ -378,6 +383,11 @@
 .button-insecto-Schistocerca_damnifica { background: linear-gradient(to right, #d9c79e 20%, #8fae63 100%); }
 .button-insecto-Teleogryllus_emma { background: linear-gradient(to right, #b07d4f 20%, #7a4b2a 100%); }
 .button-insecto-Xylocopa_sonorina { background: linear-gradient(to right, #2c2b4f 20%, #0f0e1a 100%); }
+.button-insecto-Oebalus_pugnax { background: linear-gradient(to right, #a3b18a 20%, #588157 100%); }
+.button-insecto-Lucilia_sericata { background: linear-gradient(to right, #74c69d 20%, #3a5a40 100%); }
+.button-insecto-Brachypalpus_valgus { background: linear-gradient(to right, #f5d76e 20%, #c49a36 100%); }
+.button-insecto-Leptoglossus_zonatus { background: linear-gradient(to right, #e29d5c 20%, #8a5a2b 100%); }
+.button-insecto-Polistes_erythrocephalus { background: linear-gradient(to right, #e76f51 20%, #8d3a22 100%); }
 
 /* Fondos por insecto (sencillos y acordes) */
 .fondo-insectos-Compsus_sp {
@@ -530,6 +540,57 @@
   background: linear-gradient(to bottom, #2c2b4f 20%, #0f0e1a 100%);
 }
 
+/* Nuevos hoy: fondos */
+.fondo-insectos-Oebalus_pugnax {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #a3b18a 20%, #588157 100%);
+}
+
+.fondo-insectos-Lucilia_sericata {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #74c69d 20%, #3a5a40 100%);
+}
+
+.fondo-insectos-Brachypalpus_valgus {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f5d76e 20%, #c49a36 100%);
+}
+
+.fondo-insectos-Leptoglossus_zonatus {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e29d5c 20%, #8a5a2b 100%);
+}
+
+.fondo-insectos-Polistes_erythrocephalus {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e76f51 20%, #8d3a22 100%);
+}
+
 .img-2 {
   position: absolute;
   top: -20%;
@@ -545,7 +606,9 @@
   font-size: 30px;
   font-weight: bold;
   color: white;
-  animation: text 2s linear;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  will-change: transform, opacity;
+  animation: text 0.8s ease-out forwards, pulse 1.2s ease-in-out 0.8s infinite;
 }
 
 @keyframes text {
@@ -561,6 +624,19 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* Palpitar suave del texto atrapado */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 

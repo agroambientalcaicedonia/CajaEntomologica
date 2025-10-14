@@ -7,6 +7,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   height: auto;
   padding: 20px 18px;
+  box-sizing: border-box; /* evita overflow por padding */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +41,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-inline: 8px; /* respiración sin causar overflow */
   gap: 30px;
   align-items: center;
 }
@@ -50,9 +54,11 @@
   border-radius: 15px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.249);
   padding: 10px;
+  box-sizing: border-box; /* 100% incluye el padding */
   display: flex;
   gap: 10px;
   align-items: center;
+  overflow: hidden; /* evita desbordes de contenido */
   animation: animacion 1.2s ease;
 }
 
@@ -118,5 +124,19 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* Ajustes móviles para evitar scroll lateral */
+@media (max-width: 480px) {
+  .Contenedor1 {
+    padding: 16px 12px;
+  }
+  .Contenedor1 .Targeta1 {
+    padding: 8px;
+  }
+  .Targeta1 h1 {
+    font-size: 16px;
+    margin-left: 14px;
   }
 }

@@ -1,18 +1,39 @@
 .Contenedor1 {
   width: 100%;
-  max-width: 320px;
-  margin: auto;
-  margin-top: 50px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.249);
+  max-width: 420px;
+  margin: 32px auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   height: auto;
-  padding: 20px;
+  padding: 20px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 70px;
+  gap: 16px;
+  overflow: hidden; /* evita que la imagen se desborde */
+}
+
+/* Imagen principal de la caja entomológica */
+.img-CajaEntomologica {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18);
+  object-fit: contain;
+  animation: animacion 1.1s ease;
+  transform-origin: center;
+}
+
+@media (min-width: 768px) {
+  .Contenedor1 {
+    max-width: 520px;
+    padding: 24px 22px;
+  }
+  .img-CajaEntomologica {
+    border-radius: 14px;
+  }
 }
 
 .contenedor-targetas {
@@ -57,7 +78,7 @@
 .Titulo {
   color: rgb(0, 80, 0);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   animation: animacion 0.9s ease;
 }
@@ -65,7 +86,7 @@
 .Informacion {
   color: rgb(0, 40, 0);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   animation: animacion 1s ease;
 }
 
@@ -83,6 +104,12 @@
   );
 }
 
+.img-insectosPaginaP {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
 @keyframes animacion {
   0% {
     transform: scale(0);
@@ -92,10 +119,4 @@
     transform: scale(1);
     opacity: 1;
   }
-}
-
-.img-insectosPaginaP {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
 }

@@ -179,3 +179,13 @@ export const Polistes_erythrocephalus = {
   audio: "audios/Polistes erythrocephalus.wav",
   boton: "button-insecto-Polistes_erythrocephalus",
 };
+
+export const Caja_entomologica = {
+  fondo: "fondo-caja-entomologica",
+  nombre: "Caja entomológica",
+  imagen: "./images/CajaentomologicaFondo.png",
+  decoracion: "./images/Cajaentomologica.png",
+  audio: "audios/Audio ecosistemico.mp3",
+  boton: "button-caja-entomologica",
+};
+

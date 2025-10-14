@@ -353,7 +353,8 @@
 .button-insecto-Lucilia_sericata,
 .button-insecto-Brachypalpus_valgus,
 .button-insecto-Leptoglossus_zonatus,
-.button-insecto-Polistes_erythrocephalus {
+.button-insecto-Polistes_erythrocephalus,
+.button-caja-entomologica {
   width: 100%;
   border-radius: 15px;
   color: white;
@@ -388,6 +389,8 @@
 .button-insecto-Brachypalpus_valgus { background: linear-gradient(to right, #f5d76e 20%, #c49a36 100%); }
 .button-insecto-Leptoglossus_zonatus { background: linear-gradient(to right, #e29d5c 20%, #8a5a2b 100%); }
 .button-insecto-Polistes_erythrocephalus { background: linear-gradient(to right, #e76f51 20%, #8d3a22 100%); }
+/* Botón para Caja Entomológica */
+.button-caja-entomologica { background: linear-gradient(to right, #b07d4f 20%, #7a4b2a 100%); }
 
 /* Fondos por insecto (sencillos y acordes) */
 .fondo-insectos-Compsus_sp {
@@ -589,6 +592,17 @@
   left: 0%;
   height: 100vh;
   background: linear-gradient(to bottom, #e76f51 20%, #8d3a22 100%);
+}
+
+/* Fondo para Caja Entomológica */
+.fondo-caja-entomologica {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #efe7dc 20%, #7a4b2a 100%);
 }
 
 .img-2 {

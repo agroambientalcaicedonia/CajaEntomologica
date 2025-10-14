@@ -26,6 +26,7 @@ function PaginaP() {
   const [insecto18, setInsecto18] = useState(true);
   const [insecto19, setInsecto19] = useState(true);
   const [insecto20, setInsecto20] = useState(true);
+  const [cajaEntomologica, setCajaEntomologica] = useState(false);
 
   useEffect(() => {
     const idsGuardados = JSON.parse(localStorage.getItem("idsInsectos")) || [];
@@ -90,6 +91,9 @@ function PaginaP() {
     if (idsGuardados.includes("20")) {
       setInsecto20(false);
     }
+    if (idsGuardados.includes("21")) {
+      setCajaEntomologica(false);
+    }
   }, []);
 
   const handleCardClick = (targetId, locked) => {
@@ -108,7 +112,16 @@ function PaginaP() {
             cada uno para desbloquearlos
           </h2>
         </section>
+        <section>
+          <img
+            onClick={() => handleCardClick(21, cajaEntomologica)}
+            className="img-CajaEntomologica"
+            src="./images/Cajaentomologica.png"
+            alt="Caja Entomologica"
+          />
+        </section>
         <div className="contenedor-targetas">
+          <h1 className="Titulo">Insectos de la Caja Entomologica</h1>
           <div className="Targeta1" onClick={() => handleCardClick(1, insecto1)}>
             <div className={insecto1 ? "desenfoque" : "sindesenfoque"}>
               <img

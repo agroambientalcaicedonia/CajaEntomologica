@@ -5,7 +5,7 @@ import {
   Compsus_sp, Canthon_mutabilis, Decticus_albifrons, Dryas_iulia, Edessa_meditabunda, Heilipus_lauri,
   Hydrobius_fuscipes, Macraspis_lucida, Mecopoda_niponensis, Neoconocephalus_pullus, Odontotaenius_disjunctus,
   Pardogryllacris_sp, Schistocerca_damnifica, Teleogryllus_emma, Xylocopa_sonorina, 
-  Polistes_erythrocephalus, Lucilia_sericata, Leptoglossus_zonatus, Brachypalpus_valgus, Oebalus_pugnax
+  Polistes_erythrocephalus, Lucilia_sericata, Leptoglossus_zonatus, Brachypalpus_valgus, Oebalus_pugnax, Caja_entomologica,
 } from "../const/insectos";
 
 function Insectos() {
@@ -145,6 +145,10 @@ function Insectos() {
       if (idsGuardados.includes("20")) {
         setboton(true);
       }
+    } else if (id == 21) {
+      setInsecto(Caja_entomologica);
+      setIdInsecto("21");
+      setboton(true);
     } else {
       setInsecto(null);
       setIdInsecto("0");
@@ -254,11 +258,13 @@ function Insectos() {
               </div>
             </div>
 
-            {/* Recordatorio debajo del reproductor */}
-            <div className="recordatorio-captura">
-              <span className="recordatorio-texto">¡Recuerda atrapar tu insecto!</span>
-              <span className="flecha-abajo">↓</span>
-            </div>
+            {/* Recordatorio debajo del reproductor (oculto para Caja entomológica) */}
+            {idInsecto !== "21" && (
+              <div className="recordatorio-captura">
+                <span className="recordatorio-texto">¡Recuerda atrapar tu insecto!</span>
+                <span className="flecha-abajo">↓</span>
+              </div>
+            )}
 
             {boton ? (
               <button

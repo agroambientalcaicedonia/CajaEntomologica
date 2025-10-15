@@ -370,7 +370,7 @@
 
 /* Botones por insecto: colores específicos alineados con fondos */
 .button-insecto-Compsus_sp { background: linear-gradient(to right, #8fd19e 20%, #3c8d5d 100%); }
-.button-insecto-Canthon_mutabilis { background: linear-gradient(to right, #2aa39a 20%, #116466 100%); }
+.button-insecto-Canthon_mutabilis { background: linear-gradient(to right, #322c25 20%, #c17014 100%); }
 .button-insecto-Decticus_albifrons { background: linear-gradient(to right, #8bd66b 20%, #4c9a2a 100%); }
 .button-insecto-Dryas_iulia { background: linear-gradient(to right, #ffa84b 20%, #ff6b00 100%); }
 .button-insecto-Edessa_meditabunda { background: linear-gradient(to right, #7fb069 20%, #6b4f2a 100%); }
@@ -410,7 +410,7 @@
   top: 0%;
   left: 0%;
   height: 100vh;
-  background: linear-gradient(to bottom, #2aa39a 20%, #116466 100%);
+  background: linear-gradient(to bottom, #322c25 20%, #c17014 100%);
 }
 
 .fondo-insectos-Decticus_albifrons {

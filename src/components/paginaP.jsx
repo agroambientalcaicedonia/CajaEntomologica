@@ -271,22 +271,13 @@ function PaginaP() {
             <div className={insecto17 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
-                src="./images/Oebalus pugnax.png" 
-                alt="Oebalus pugnax" />
-              <h1>Oebalus pugnax</h1>
-            </div>
-          </div>
-          <div className="Targeta1" onClick={() => handleCardClick(18, insecto18)}>
-            <div className={insecto18 ? "desenfoque" : "sindesenfoque"}>
-              <img 
-                className="img-insectosPaginaP"
                 src="./images/Lucilia sericata.png" 
                 alt="Lucilia sericata" />
               <h1>Lucilia sericata</h1>
             </div>
           </div>
-          <div className="Targeta1" onClick={() => handleCardClick(19, insecto19)}>
-            <div className={insecto19 ? "desenfoque" : "sindesenfoque"}>
+          <div className="Targeta1" onClick={() => handleCardClick(18, insecto18)}>
+            <div className={insecto18 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Leptoglossus zonatus.png" 
@@ -294,8 +285,8 @@ function PaginaP() {
               <h1>Leptoglossus zonatus</h1>
             </div>
           </div>
-          <div className="Targeta1" onClick={() => handleCardClick(20, insecto20)}>
-            <div className={insecto20 ? "desenfoque" : "sindesenfoque"}>
+          <div className="Targeta1" onClick={() => handleCardClick(19, insecto19)}>
+            <div className={insecto19 ? "desenfoque" : "sindesenfoque"}>
               <img 
                 className="img-insectosPaginaP"
                 src="./images/Brachypalpus valgus.png" 
@@ -303,6 +294,18 @@ function PaginaP() {
               <h1>Brachypalpus valgus</h1>
             </div>
           </div>
+          <div className="Targeta1" onClick={() => handleCardClick(20, insecto20)}>
+            <div className={insecto20 ? "desenfoque" : "sindesenfoque"}>
+              <img 
+                className="img-insectosPaginaP"
+                src="./images/Oebalus pugnax.png" 
+                alt="Oebalus pugnax" />
+              <h1>Oebalus pugnax</h1>
+            </div>
+          </div>
+          
+          
+          
         </div>
       </div>
     </div>

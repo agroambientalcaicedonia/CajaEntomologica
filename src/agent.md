@@ -1,4 +1,4 @@
-# 🪲 Proyecto: EcoCaza
+# 🪲 Proyecto: CajaEntomologica
 
 ## 1. Descripción general
 
@@ -52,8 +52,8 @@ Educar de forma divertida sobre la **biodiversidad e importancia ecológica** de
 - **Almacenamiento local:** LocalStorage  
 - **Audio narrativo:** Generado con IA (modelo de texto a voz)  
 - **QRs:** Generados externamente (enlazan a URLs específicas del sitio)  
-- **Estilo:** TailwindCSS (opcional)  
-- **Hosting:** GitHub Pages o Netlify  
+- **Estilo:** CSS (opcional)  
+- **Hosting:** GitHub Pages
 
 ---
 

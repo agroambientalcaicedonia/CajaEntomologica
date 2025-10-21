@@ -27,6 +27,7 @@ function PaginaP() {
   const [insecto19, setInsecto19] = useState(true);
   const [insecto20, setInsecto20] = useState(true);
   const [cajaEntomologica, setCajaEntomologica] = useState(false);
+  const [coleccionCompleta, setColeccionCompleta] = useState(false);
 
   useEffect(() => {
     const idsGuardados = JSON.parse(localStorage.getItem("idsInsectos")) || [];
@@ -91,9 +92,9 @@ function PaginaP() {
     if (idsGuardados.includes("20")) {
       setInsecto20(false);
     }
-    if (idsGuardados.includes("21")) {
-      setCajaEntomologica(false);
-    }
+    // Calcula si la colección está completa (IDs 1..20 presentes)
+    const requiredIds = Array.from({ length: 20 }, (_, i) => (i + 1).toString());
+    setColeccionCompleta(requiredIds.every((id) => idsGuardados.includes(id)));
   }, []);
 
   const handleCardClick = (targetId, locked) => {
@@ -120,6 +121,15 @@ function PaginaP() {
             alt="Caja Entomologica"
           />
         </section>
+        {coleccionCompleta && (
+          <div className="congrats-banner">
+            <span className="congrats-emoji">🎉</span>
+            <div>
+              <h3 className="Titulo">¡Felicitaciones!</h3>
+              <p className="congrats-text">Has atrapado todos los insectos de la caja entomológica.</p>
+            </div>
+          </div>
+        )}
         <div className="contenedor-targetas">
           <h1 className="Titulo">Insectos de la Caja Entomologica</h1>
           <div className="Targeta1" onClick={() => handleCardClick(1, insecto1)}>
@@ -303,9 +313,6 @@ function PaginaP() {
               <h1>Oebalus pugnax</h1>
             </div>
           </div>
-          
-          
-          
         </div>
       </div>
     </div>

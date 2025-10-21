@@ -25,6 +25,14 @@ function Insectos() {
 
 
   useEffect(() => {
+    // Bloqueo de acceso por URL: solo IDs desbloqueados o caja (21)
+    const idStr = String(id);
+    const esCaja = idStr === "21";
+    const desbloqueado = idsGuardados.includes(idStr);
+    if (!esCaja && !desbloqueado) {
+      navigate("/");
+      return;
+    }
     if (id == 1) {
       setInsecto(Compsus_sp);
       setIdInsecto("1");
